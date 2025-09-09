@@ -13,13 +13,14 @@ const TodoItem = ({ todo }) => {
           checked={todo.completed}
           onChange={() => toggleTodo(todo.id)}
         />
-        <S.ItemTitle className={todo.completed ? "done" : ""}>
-          {todo.title}
-        </S.ItemTitle>
-        <S.DeleteButton onClick={() => removeTodo(todo.id)} title="삭제">
-          삭제
-        </S.DeleteButton>
+        <span />
       </S.Check>
+      <S.ItemTitle className={todo.completed ? "done" : ""}>
+        {todo.title}
+      </S.ItemTitle>
+      <S.DeleteButton onClick={() => removeTodo(todo.id)} title="삭제">
+        삭제
+      </S.DeleteButton>
     </S.ItemRow>
   );
 };
